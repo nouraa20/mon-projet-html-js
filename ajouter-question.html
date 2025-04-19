@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+          font-family: sans-serif;
+          background-color: #eee;
+          padding: 20px;
+        }
+        form {
+          background-color: white;
+          padding: 20px;
+          border: 1px solid #ccc;
+          max-width: 500px;
+          margin: auto;
+        }
+        h1 {
+          text-align: center;
+        }
+        input, textarea {
+          display: block;
+          width: 100%;
+          margin-bottom: 10px;
+          padding: 8px;
+          border: 1px solid #ccc;
+        }
+        button {
+          padding: 10px 15px;
+          margin-top: 10px;
+          background-color: #007bff;
+          color: white;
+          border: none;
+          cursor: pointer;
+        }
+    
+        button:hover {
+          background-color: #0056b3;
+        }
+      </style>
+</head>
+<body>
+  <form id="form-question">
+    <h1>Ajouter une question à un examen</h1>
+    <input type="text" id="proprietaire" placeholder="Nom du propriétaire" required>
+    <input type="text" id="nom-examen" placeholder="Nom de l'examen" required>
+    <textarea id="enonce" placeholder="Énoncé de la question" required></textarea>
+    <input type="number" id="duree" placeholder="Durée (secondes)" required>
+    <input type="number" id="points" placeholder="Points" required>
+    <div id="propositions"></div>
+    <button type="button" id="add-proposition">Ajouter une proposition</button><br><br>
+    <button type="submit">Ajouter la question</button>
+  </form>
+  <script src="ajouter-question.js"></script>
+</body>
+</html>
